@@ -17,3 +17,15 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Objectives of project
+
+get a more in depth understanding  of Vue, what it is capable of etc
+
+manage files structure and components in a more efficient way
+
+attach a backend to in preparation for my paint storage all
+
+
+
