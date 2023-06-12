@@ -1,0 +1,6 @@
+vue files single page component. 
+
+every vue app made 3 parts, html template, script where we export the componenet object and style tag for styling to template. Script and Style optional.
+create template for component within component file.
+
+template refs - allow us to take a bit of the DOM, store in variable and do regulart javascript stuff with it
