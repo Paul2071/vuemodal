@@ -2,14 +2,18 @@
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
   <button @click="handleClick()" >GET PAINT NAME</button>
+  <Modal/>
  
 </template>
 
 <script>
 
+import Modal from "./components/Modal.vue"
+
 
 export default {
   name: 'App',
+  components: {Modal},
   
   data () {
     return {
@@ -24,6 +28,7 @@ export default {
       this.$refs.paint.focus()
     }
   }
+
 }
 </script>
 

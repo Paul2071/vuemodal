@@ -4,3 +4,5 @@ every vue app made 3 parts, html template, script where we export the componenet
 create template for component within component file.
 
 template refs - allow us to take a bit of the DOM, store in variable and do regulart javascript stuff with it
+
+same logic with components with single page componenets - extract logic where you can, keep components readable
