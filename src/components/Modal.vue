@@ -1,10 +1,18 @@
 <template>
     <div class="backdrop">
         <div class="modal">
-            <p>modal content</p>
+            <p>{{ header }}</p>
         </div>
     </div>
 </template>
+
+<script>
+
+export default {
+  props: ['header']
+}
+
+</script>
 
 <style>
   .modal {

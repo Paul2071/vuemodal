@@ -1,8 +1,19 @@
+Vue file setup
+
 vue files single page component. 
+same logic with components with single page componenets - extract logic where you can, keep components readable
 
 every vue app made 3 parts, html template, script where we export the componenet object and style tag for styling to template. Script and Style optional.
 create template for component within component file.
 
 template refs - allow us to take a bit of the DOM, store in variable and do regulart javascript stuff with it
 
-same logic with components with single page componenets - extract logic where you can, keep components readable
+
+
+CSS
+
+css styles will apply to template and component in vua component file - to get around this need to add "scoped" property to the style tag which makes css affect the file it is in. Minimal effect in performance, but some. Another way is to use .<Foo> to the css style to specify which component it is targetting.
+Global css is also a thing, create a file, import @ main.js. Can still override within the component itself.
+
+Props:
+Similar to React, use props to make components resuable. Handle in slightyl differeny way. Within the resuable component tag, give it a prop that is equal to a string ( <Modal header="paint collection"/>) for example. Then within the Modal comp itself, tell it to expect a prop with a script tag and export default of an object with a key value pair of "props" then an array with the name of the expected props. That element in the array is now available to use within {{ }}

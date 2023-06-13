@@ -2,7 +2,7 @@
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
   <button @click="handleClick()" >GET PAINT NAME</button>
-  <Modal/>
+  <Modal header="Paint collection"/>
  
 </template>
 
