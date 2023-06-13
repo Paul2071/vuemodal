@@ -17,3 +17,4 @@ Global css is also a thing, create a file, import @ main.js. Can still override 
 
 Props:
 Similar to React, use props to make components resuable. Handle in slightyl differeny way. Within the resuable component tag, give it a prop that is equal to a string ( <Modal header="paint collection"/>) for example. Then within the Modal comp itself, tell it to expect a prop with a script tag and export default of an object with a key value pair of "props" then an array with the name of the expected props. That element in the array is now available to use within {{ }}
+To use an array or object as a prop, you need to bind to it using ":" - <Modal :header="["Doomfire", "Striking"]"/> would be the example here.

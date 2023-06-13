@@ -2,6 +2,9 @@
     <div class="backdrop">
         <div class="modal">
             <p>{{ header }}</p>
+            <p>{{ list[0] }}</p>
+            <p>{{ list[1] }}</p>
+            
         </div>
     </div>
 </template>
@@ -9,7 +12,7 @@
 <script>
 
 export default {
-  props: ['header']
+  props: ['header', "list"]
 }
 
 </script>

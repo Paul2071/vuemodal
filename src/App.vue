@@ -2,7 +2,7 @@
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
   <button @click="handleClick()" >GET PAINT NAME</button>
-  <Modal header="Paint collection"/>
+  <Modal :header="header" :list="list" />
  
 </template>
 
@@ -17,7 +17,9 @@ export default {
   
   data () {
     return {
-      title:  "first app"
+      title:  "first app",
+      header: "Paint collection ",
+      list: ["Doomfire Magenta", "Striking Scorpion Green" ]
     }
   },
   methods: {
