@@ -1,10 +1,12 @@
 <template>
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
-  <button @click="handleClick()" >GET PAINT NAME</button>
   <div v-if="showModal">
-  <Modal :header="header" :list="list" theme="sale" />
+    <Modal :header="header" :list="list" theme="sale" @closemodal="toggleModal"/>
+    
   </div>
+  <button @click="handleClick()" >GET PAINT NAME</button>
+  <button @click="toggleModal()" >Open</button>
  
 </template>
 
@@ -31,6 +33,9 @@ export default {
      
       this.$refs.paint.classList.add("select")
       this.$refs.paint.focus()
+    },
+    toggleModal() {
+      this.showModal = !this.showModal
     }
   }
 
