@@ -2,7 +2,14 @@
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
   <div v-if="showModal">
-    <Modal :header="header" :list="list" theme="sale" @closemodal="toggleModal"/>
+    <Modal  theme="sale" @closemodal="toggleModal">
+      
+      <li v-for="paint in paints">
+        <h1>{{ paint.name }}</h1>
+
+      </li>
+      
+  </Modal>
     
   </div>
   <button @click="handleClick()" >GET PAINT NAME</button>
@@ -24,7 +31,19 @@ export default {
       showModal: false,
       title:  "first app",
       header: "Paint collection ",
-      list: ["Doomfire Magenta", "Striking Scorpion Green" ]
+      paints: [
+          { type: "Contrast",
+          name: "Doomfire Magenta",
+          colour: "Purple", img: 'images/PaintMagenta.png', isOwned: true },
+
+          { type: "Contrast",
+          name: "Striking Scorpion Green",
+          colour: "Green", img: 'images/PaintStriking.png', isOwned: false   },
+
+          { type: "Contrast",
+          name: "Flesh tearer red",
+          colour: "Red", img: 'images/PaintFlesh.png', isOwned: true }
+        ]
     }
   },
   methods: {
