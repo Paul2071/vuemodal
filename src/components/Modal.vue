@@ -1,7 +1,7 @@
 <template>
     <div class="backdrop">
-        <div class="modal">
-            <p>{{ header }}</p>
+        <div class="modal" :class="{sale: theme === 'sale'}">
+            <h1>{{ header }}</h1>
             <p>{{ list[0] }}</p>
             <p>{{ list[1] }}</p>
             
@@ -12,7 +12,7 @@
 <script>
 
 export default {
-  props: ['header', "list"]
+  props: ['header', "list", "theme"]
 }
 
 </script>
@@ -32,5 +32,10 @@ export default {
     width: 100%;
     height: 100%;
   }
+  .modal.sale {
+    background: crimson;
+    color: white;
+  }
+
 
 </style>

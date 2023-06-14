@@ -2,7 +2,9 @@
   <h1>{{title}}</h1>
   <input type="text" ref="paint">
   <button @click="handleClick()" >GET PAINT NAME</button>
-  <Modal :header="header" :list="list" />
+  <div v-if="showModal">
+  <Modal :header="header" :list="list" theme="sale" />
+  </div>
  
 </template>
 
@@ -17,6 +19,7 @@ export default {
   
   data () {
     return {
+      showModal: false,
       title:  "first app",
       header: "Paint collection ",
       list: ["Doomfire Magenta", "Striking Scorpion Green" ]
@@ -47,4 +50,8 @@ h1 {
   border-bottom: 2px solid #2c3e50;
   display: inline-block;
 }
+.modal sale {
+    background: crimson;
+   
+  }
 </style>
