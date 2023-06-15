@@ -1,7 +1,13 @@
 <template>
     <div class="backdrop" @click.self="closeModal">
         <div class="modal" :class="{sale: theme === 'sale'}">
-            <slot></slot>
+
+            <slot>default content -- something gone wrong!</slot>
+
+            <div class="actions">
+              <slot name="citadel"></slot>
+            </div>
+            
             
         </div>
     </div>

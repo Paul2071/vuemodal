@@ -3,17 +3,36 @@
   <input type="text" ref="paint">
   <div v-if="showModal">
     <Modal  theme="sale" @closemodal="toggleModal">
-      
+   
       <li v-for="paint in paints">
         <h1>{{ paint.name }}</h1>
-
       </li>
+
+      
+      <template v-slot:citadel>
+        <a href='aa'>sign up now</a>
+      </template>
       
   </Modal>
+  
+</div>
+
+<div v-if="showModalTwo">
+
+  <Modal  theme="" @closemodal="toggleModalTwo">
+
     
-  </div>
+    <li v-for="paint in paints">
+        <h1>{{ paint.name }}</h1>
+      </li>
+
+    
+  </Modal>
+
+</div>
   <button @click="handleClick()" >GET PAINT NAME</button>
-  <button @click="toggleModal()" >Open</button>
+  <button @click="toggleModal()" >Open Citadel</button>
+  <button @click="toggleModalTwo()" >Open Vallejo</button>
  
 </template>
 
@@ -29,6 +48,7 @@ export default {
   data () {
     return {
       showModal: false,
+      showModalTwo: false,
       title:  "first app",
       header: "Paint collection ",
       paints: [
@@ -55,6 +75,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo
     }
   }
 

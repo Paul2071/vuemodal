@@ -26,3 +26,5 @@ this.$emit() to send out the batsignal that something has happened
 Slots:
 
 In  comp, rather than hardcoding h1 etc, you can use <slot></slot> tag and then put your own data in where the comp is rendrered. For example, open the modal tag to be <Modal> {enter data here} </Modal> where it is rendered then use <slot></slot> on the comp page itself within the template tag
+
+In the default slot, the content will be rendered if the slot isnt filled with content in the parent comp
